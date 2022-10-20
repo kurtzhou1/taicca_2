@@ -7,11 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './styles/section3.scss'
 import popData from './popData.json'
 import Popup from './Popup'
-
-import titleH1 from '../components/images/section2/s3_h1.png'
-import footerBgl from '../components/images/section2/footer_left.png'
-import footerBgr from '../components/images/section2/footer_right.png'
-import footerLogo from '../components/images/section2/footer_logo.png'
+import footerLogo from '../components/images/section4/footerLogo.png'
 
 
 const MarketIntelligence = () => {
@@ -21,12 +17,13 @@ const MarketIntelligence = () => {
     const [popContent,setPopContent] = useState('');
 
     const settings = {
+        centerMode: true,
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         speed: 1000,
         autoplaySpeed: 2500,
         responsive:[
@@ -48,12 +45,16 @@ const MarketIntelligence = () => {
     return (
         <div className="marketIntelligence">
             <div className="content_block">
-                <div className="block_title_h1">
+                {/* <div className="block_title_h1">
                     <img src={titleH1} alt="" />
+                </div> */}
+                <div className="subTitle bigClassTitle">
+                    市場掃描
                 </div>
-                <div className="subTitle">
-                    想了解文化內容產業最新動態？<br />
-                    《TAICCA誌》帶你快速掌握全球文化內容產業重要商業情報
+                <div className="subTitle classSubtitle">
+                    <div>想了解文化內容產業最新動態？</div>
+                    <div>《TAICCA誌》帶你快速掌握</div>
+                    <div>全球文化內容產業重要商業情報</div>
                 </div>
 
                 {/* 輪播 */}
@@ -78,7 +79,7 @@ const MarketIntelligence = () => {
                                                     setPoptitle(item.title);
                                                  }
                                                 }
-                                            >MORE+</div>
+                                            ><span>＋</span></div>
                                         </div>
                                     </div>
                                 );
@@ -89,11 +90,7 @@ const MarketIntelligence = () => {
 
        
             </div>
-        
-                <img src={footerBgl} alt="" className='footerBGl'/>
-                <img src={footerBgr} alt="" className='footerBGr'/>
                 <img src={footerLogo} alt="" className='footerLogo'/>
-               
                <Popup open={open} closeFun={()=>{setOpen(false)}} title={poptitle} content={popContent} color={popClolr}/>
         </div>
     );

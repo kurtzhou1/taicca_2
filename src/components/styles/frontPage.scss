@@ -1,0 +1,94 @@
+@mixin forPC {
+    @media screen and (min-width: 980px) {
+        @content;
+    }
+}
+
+.frontPage{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    .fp_header {
+        position: absolute;
+        font-size: 8px;
+        color: #fff;
+        padding: 2rem 0 0 2rem;
+    }
+    .fp_header2 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        font-size: 12px;
+        color: #fff;
+        >span{
+            margin: 2rem 2rem;
+        }
+        @include forPC(){
+            font-size: 20px;
+            justify-content: center;
+        }
+    }
+    .burger{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 3rem 2.5rem 0 0;
+        font-size: 2rem;
+        color: #fff;
+        @include forPC(){
+            margin: 1.5rem 3.5rem 0 0;
+            font-size: 3rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .fp_body {
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        .title {
+            width: 100%;
+            height: 150px;
+            text-indent: -9999px;
+            display: block;
+            margin: 2rem 0;
+            background: url(../images/front/logo.png) no-repeat center;
+            background-size: contain;
+            @include forPC(){
+                height: 250px;
+                margin: 0 auto;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include forPC(){
+                flex-direction: row;
+                justify-content: center;
+                font-size: 45px;
+                margin-top: 2rem;
+            }
+        }
+    }
+    .bigClassCard2.bigClass{
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+

@@ -57,32 +57,32 @@ body {
 }
 
 .bigClass{
-    font-size: 80px;
-    line-height: 60px;
+    font-size: 80px !important;
+    line-height: 60px !important;
     font-weight: bold;
     @include forPC(){
-        font-size: 200px;
-        line-height: 200px;
+        font-size: 200px !important;
+        line-height: 200px !important;
     }
 }
 
 .bigClassTitle{
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 30px !important;
+    line-height: 60px !important;
     text-align: center;
     font-weight: bold;
     @include forPC(){
-        font-size: 50px;
-        line-height: 100px;
+        font-size: 50px !important;
+        line-height: 100px !important;
     }
 }
 
 .bigClassSubtitle{
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 12px !important;
+    line-height: 20px !important;
     @include forPC(){
-        font-size: 28px;
-        line-height: 50px;
+        font-size: 28px !important;
+        line-height: 50px !important;
     }
 }
 
@@ -115,11 +115,11 @@ body {
 }
 
 .classSubtitle{
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 18px !important;
+    line-height: 20px !important;
     @include forPC(){
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 30px !important;
+        line-height: 36px !important;
     }
 }
 
@@ -148,4 +148,9 @@ body {
         font-size: 24px;
         line-height: 42px;
     }
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
 }

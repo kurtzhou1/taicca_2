@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './styles/frontPage.scss';
 import front_img_M from './images/front/frontPage_M.png';
 import front_img from './images/front/frontPage.png';
+import Menu from './Menu.jsx';
 
-const Kv = () => {
+const FrontPage = () => {
 
     const [isPc, setIsPc] = useState(false);
+    const [leftVisible,setLeftVisible]= useState(false);
     useEffect(()=>{
         if (navigator.userAgent.match(/Android/i)
         || navigator.userAgent.match(/webOS/i)
@@ -24,7 +26,10 @@ const Kv = () => {
     
     return (
         <div className="frontPage">
-            <span className="burger">☰</span>
+            <div className={`leftVisible ${leftVisible ? "show":""}`}>
+            </div>
+            <Menu isShow={leftVisible} setLeftVisible={setLeftVisible}/>
+            <div className="burger" onClick={()=>setLeftVisible(true)}>☰</div>
             <div className="fp_header"><span>Taiwan Creative Content Agency Publishing</span></div>
             <div className="fp_header2"><span>taicca.tw</span></div>
             <div className="fp_body classSubtitle">
@@ -37,9 +42,9 @@ const Kv = () => {
             {isPc ? <img alt="" src={front_img} className="front_img" /> :
             <img alt="" src={front_img_M} className="front_img_M" />
             }
-            <div className='bigClassCard2 bigClass'><span>02</span></div>
+            <div className='bigClassCard2 bigClass'><span>01</span></div>
         </div>
     );
 }
 
-export default Kv;
+export default FrontPage;

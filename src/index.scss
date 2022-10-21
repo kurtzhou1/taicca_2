@@ -69,11 +69,13 @@ body {
 .bigClassTitle{
     font-size: 30px !important;
     line-height: 60px !important;
-    text-align: center;
     font-weight: bold;
     @include forPC(){
         font-size: 50px !important;
         line-height: 100px !important;
+    }
+    &.title, &.subTitle{
+        text-align: center;
     }
 }
 

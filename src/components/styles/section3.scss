@@ -162,10 +162,8 @@
         font-size: 28px;
         font-weight: bold;
         color: #fff;
-        margin: 20px 0 20px 0px;
-        @media screen and (max-width:1200px){
-            font-size: 20px;
-            margin: 10px 0 10px 0px;
+        @include forPC(){
+            margin: 20px 0 20px 0px;
         }
     }
     .slider_block{
@@ -191,25 +189,30 @@
             padding: 10px;
             .news_card{
                 position: relative;
-                padding: 15px;
+                padding: 5px;
                 background: #fff;
                 margin: 0 0.5em;
+                @include forPC(){
+                    padding: 15px;
+                }
                 .card_title{
                     width: 100%;
                     position: relative;
-                    margin-bottom: 30px;
                     font-size: 20px;
                     min-height: 100px;
+                    @include forPC(){
+                        margin-bottom: 30px;
+                    }
                 }
                 p{
                     font-size: 16px;
                     line-height: 25px;
                     color: #666;
-                    margin-bottom: 30px;
                     //重要卡
                     min-height: 250px;
                     @include forPC(){
                         min-height: 150px;
+                        margin-bottom: 30px;
                     }
                 }
                 .more_link{

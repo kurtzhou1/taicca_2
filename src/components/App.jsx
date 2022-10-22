@@ -17,7 +17,7 @@ const Containers = () => {
             <div className='page'>
                 <FrontPage />
             </div>
-            <div className='section2_block'>
+            <div className='section2_block' id="01section">
                 <div className='introduction'>
                     <div className='title bigClassTitle'>TAICCA聚焦</div>
                     <div className='content bigClassSubtitle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime neque laboriosam aut, fugit blanditiis impedit, exercitationem fuga minima delectus pariatur in eveniet alias similique sapiente provident deserunt voluptatibus voluptas dolorem aliquid mollitia tempore. Saepe cumque officia ex a quidem aliquam quod perferendis, in vitae! Suscipit error id officia repellat quidem deserunt soluta, facilis reiciendis repudiandae officiis autem repellendus fugit nulla magni ut ipsa quo omnis qui assumenda quia modi eius aliquam, unde iste. Similique accusamus voluptatibus aliquam quaerat doloremque sunt animi repellendus atque eos hic vitae, quia blanditiis nihil? Mollitia, tempora! Repellat autem nobis molestias consequuntur libero nihil ipsam!</div>
@@ -26,7 +26,7 @@ const Containers = () => {
                 <div className='articleCard'><ArticleCards /></div>
                 <div className='bigClassCard1 bigClass'><span>02</span></div>
             </div>
-            <div className='section3_block'>
+            <div className='section3_block' id="02section">
                 <div className='introduction'>
                     <div className='title bigClassTitle'>產業研究&nbsp;/&nbsp;台灣觀察</div>
                     <div className='picTable'><PicTable /></div>
@@ -41,7 +41,7 @@ const Containers = () => {
                 </div>
                 <div className='bigClassCard2 bigClass'><span>03</span></div>
             </div>
-            <div className="section4_block">
+            <div className="section4_block" id="03section">
                 {/* 情商掃描 */}
                 <div className='section_3_box'><MarketIntelligence /></div>
             </div>

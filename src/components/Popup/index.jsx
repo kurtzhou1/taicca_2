@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 import './style.scss'
 import pic1 from '../images/section4/03-1pic.png';
 import pic2 from '../images/section4/03-2pic.png';

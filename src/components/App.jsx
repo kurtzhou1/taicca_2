@@ -2,8 +2,6 @@ import React from 'react';
 import './styles/section2.scss'
 import './styles/section3.scss'
 import FrontPage from './FrontPage';
-import Music3 from './Ｍusic3'
-import VisualArt3 from './VisualArt3'
 import MarketIntelligence from './MarketIntelligence'
 import ArticleCards from './ArticleCards';
 import ArticleCards2 from './ArticleCards2';
@@ -20,8 +18,9 @@ const Containers = () => {
             <div className='section2_block' id="01section">
                 <div className='introduction'>
                     <div className='title bigClassTitle'>TAICCA聚焦</div>
-                    <div className='content bigClassSubtitle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum maxime neque laboriosam aut, fugit blanditiis impedit, exercitationem fuga minima delectus pariatur in eveniet alias similique sapiente provident deserunt voluptatibus voluptas dolorem aliquid mollitia tempore. Saepe cumque officia ex a quidem aliquam quod perferendis, in vitae! Suscipit error id officia repellat quidem deserunt soluta, facilis reiciendis repudiandae officiis autem repellendus fugit nulla magni ut ipsa quo omnis qui assumenda quia modi eius aliquam, unde iste. Similique accusamus voluptatibus aliquam quaerat doloremque sunt animi repellendus atque eos hic vitae, quia blanditiis nihil? Mollitia, tempora! Repellat autem nobis molestias consequuntur libero nihil ipsam!</div>
-                    <div className='subContent bigClassSubtitle'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, eius sed! Inventore illum itaque dolores. Odio quisquam nisi voluptas tempora pariatur molestias vel tempore, earum delectus nostrum ea, exercitationem sed!</div>
+                    <div className='content bigClassSubtitle'>文化內容以多元樣貌滿足不同消費族群的日常娛樂需求，當我們把這些緣起於創意的產品「拆解」，觀察一部漫畫、一齣舞台劇或一場電影背後的製作和生產，它們組成的結構是否存在公式？</div>
+                    <div className='content bigClassSubtitle'>首先，吸引人的好故事是基本吧！再來，還需要運籌帷幄的資本；而在科技快速迭代的今日，好的故事加上科技應用，更能吸引愛嘗鮮的消費者。本期「Taicca聚焦」透過四篇文章，與您一起探討故事、資本與科技，如何成為支持文化內容發光的力量！</div>
+                    <div className='subContent bigClassSubtitle'>TAICCA聚焦封面設計：將故事力、資本力跟科技力三個文化內容的重要元素，利用《愛麗絲夢遊仙境》故事轉化，將各個角色拆開再結合，例如代表「故事」的愛麗絲拾起示意「科技」、呼應原作瘋帽的太空帽，散落的硬幣雨代表「資本」，而在硬幣上刻有兔子頭像和專屬皇后的愛心圖案。角落的白兔與月亮也有一點傳說的味道，是充滿幻想又穿插現實的一張插畫。插畫家 林花　自由接案插畫家，容易踢被子的白羊座，最近的限時動態都是廢文。</div>
                 </div>
                 <div className='articleCard'><ArticleCards /></div>
                 <div className='bigClassCard1 bigClass'><span>02</span></div>
@@ -45,15 +44,6 @@ const Containers = () => {
                 {/* 情商掃描 */}
                 <div className='section_3_box'><MarketIntelligence /></div>
             </div>
-            <div className="section_2_block">
-                {/* 國際動態(音樂) */}
-                <div className='section_2_box'><Music3 /></div>
-                {/* 國際動態(視覺藝術) */}
-                <div className='section_2_box'><VisualArt3 /></div>
-            </div>
-
-          
-
             {/* <section id="HOME"><Home/></section>
             <section id="ABOUT"><About/></section>
             <section id="PROJECT"><Project /></section> */}

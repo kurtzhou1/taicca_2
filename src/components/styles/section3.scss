@@ -8,7 +8,7 @@
 .section3_block{
     padding: 1rem 2rem 0 2rem;
     @include forPC(){
-        padding: 2rem 10rem 0 10rem;
+        padding: 2rem 8rem 0 8rem;
         .title.bigClassTitle{
             margin: 2rem 0;
             text-align: center;
@@ -252,7 +252,7 @@
                     line-height: 25px;
                     color: #666;
                     //重要卡
-                    min-height: 250px;
+                    min-height: 200px;
                     @include forPC(){
                         min-height: 150px;
                         margin-bottom: 30px;

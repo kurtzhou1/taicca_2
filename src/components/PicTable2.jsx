@@ -19,18 +19,51 @@ const PicTable2 = () => {
         { name: 'AI作品', value: 100 },
     ];
 
+    const data4 = [
+        { name: '作品1', value: 100 },
+    ];
+
+    const data5 = [
+        { name: '作品2', value: 100 },
+    ];
+
+    const data6 = [
+        { name: '作品...', value: 100 },
+    ];
+
     const RADIAN = Math.PI / 180;
 
     const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index,name }) => {
-        const radius = isPc ? innerRadius + (outerRadius - innerRadius) * 0.5 : innerRadius + (outerRadius - innerRadius) * 0.001;
+        // const radius = isPc ? innerRadius + (outerRadius - innerRadius) * 0.5 : innerRadius + (outerRadius - innerRadius) * 0.001;
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
       
         return (
+            <>
             <text className='pie_name' x={isPc ? x+125 : x+25} y={isPc ? y-20 : y-10} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
                 {name}
             </text>
+            </>
+        );
+    };
 
+    const renderCustomizedLabel2 = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index,name }) => {
+        // const radius = isPc ? innerRadius + (outerRadius - innerRadius) * 0.5 : innerRadius + (outerRadius - innerRadius) * 0.001;
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+        const x = cx + radius * Math.cos(-midAngle * RADIAN);
+        const y = cy + radius * Math.sin(-midAngle * RADIAN);
+      
+        return (
+            <>
+            {/* <text className='pie_name' x={isPc ? x+125 : x+25} y={isPc ? y-20 : y-10} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central"> */}
+            <text className='pie_name' x={isPc ? x+125 : x+25} y={isPc ? y-30 : y-10} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+            半自動/自動
+            </text>
+            <text className='pie_name' x={isPc ? x+125 : x+25} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+            生成中
+            </text>
+            </>
         );
     };
 
@@ -98,6 +131,7 @@ const PicTable2 = () => {
                                 cy="50%"
                                 labelLine={false}
                                 label={renderCustomizedLabel}
+                                strokeWidth={0}
                                 // outerRadius={80}
                                 fill="#d882ff"
                                 dataKey="value"
@@ -107,7 +141,7 @@ const PicTable2 = () => {
                     </ResponsiveContainer>
                     }
                 </div>
-                <div className="pieChart2" id="target_pie">
+                <div className="pieChart2">
                     {
                         showImage && <ResponsiveContainer width="100%" height="100%">
                         <PieChart width={10} height={10}>
@@ -116,7 +150,8 @@ const PicTable2 = () => {
                                 cx="50%"
                                 cy="50%"
                                 labelLine={false}
-                                label={renderCustomizedLabel}
+                                label={renderCustomizedLabel2}
+                                strokeWidth={0}
                                 // outerRadius={80}
                                 fill="#bc71de"
                                 dataKey="value"
@@ -127,7 +162,7 @@ const PicTable2 = () => {
                     </ResponsiveContainer>
                     }
                 </div>
-                <div className="pieChart3" id="target_pie">
+                <div className="pieChart3">
                     {
                         showImage && <ResponsiveContainer width="100%" height="100%">
                         <PieChart width={10} height={10}>
@@ -137,8 +172,72 @@ const PicTable2 = () => {
                                 cy="50%"
                                 labelLine={false}
                                 label={renderCustomizedLabel}
+                                strokeWidth={0}
                                 // outerRadius={80}
                                 fill="#9d5eba"
+                                dataKey="value"
+                            >
+                                資料庫
+                            </Pie>
+                        </PieChart>
+                    </ResponsiveContainer>
+                    }
+                </div>
+                <div className="pieChart4">
+                    {
+                        showImage && <ResponsiveContainer width="100%" height="100%">
+                        <PieChart width={10} height={10}>
+                            <Pie
+                                data={data4}
+                                cx="50%"
+                                cy="50%"
+                                labelLine={false}
+                                label={renderCustomizedLabel}
+                                strokeWidth={0}
+                                // outerRadius={80}
+                                fill="#f1d2ff"
+                                dataKey="value"
+                            >
+                                資料庫
+                            </Pie>
+                        </PieChart>
+                    </ResponsiveContainer>
+                    }
+                </div>
+                <div className="pieChart5">
+                    {
+                        showImage && <ResponsiveContainer width="100%" height="100%">
+                        <PieChart width={10} height={10}>
+                            <Pie
+                                data={data5}
+                                cx="50%"
+                                cy="50%"
+                                labelLine={false}
+                                label={renderCustomizedLabel}
+                                strokeWidth={0}
+                                // outerRadius={80}
+                                fill="#f1d2ff"
+                                dataKey="value"
+                            >
+                                資料庫
+                            </Pie>
+                        </PieChart>
+                    </ResponsiveContainer>
+                    }
+                </div>
+                <div className="pieChart6">
+                    {
+                        showImage && <ResponsiveContainer width="100%" height="100%">
+                        <PieChart width={10} height={10}>
+                            <Pie
+                                data={data6}
+                                cx="50%"
+                                cy="50%"
+                                labelLine={false}
+                                label={renderCustomizedLabel}
+                                strokeWidth={0}
+                                // outerRadius={80}
+                                fill="#f1d2ff"
                                 dataKey="value"
                             >
                                 資料庫

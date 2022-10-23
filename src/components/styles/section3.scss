@@ -121,6 +121,30 @@
                 bottom: 6%;
                 left: 78%;
             }
+            .pieChart4{
+                position: absolute;
+                width: 30%;
+                height: 50%;
+                bottom: 6%;
+                left: -6%;
+                z-index: 2;
+            }
+            .pieChart5{
+                position: absolute;
+                width: 25%;
+                height: 45%;
+                bottom: 34%;
+                left: -4%;
+                z-index: 1;
+            }
+            .pieChart6{
+                position: absolute;
+                width: 17%;
+                height: 49%;
+                bottom: 53%;
+                left: 0%;
+                z-index: 0;
+            }
         }
         .greenLight{
             color: rgb(64, 243, 79);

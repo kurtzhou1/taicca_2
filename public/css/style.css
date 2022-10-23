@@ -89,6 +89,10 @@ input,select,a img{vertical-align:middle;}
     height: auto;
 }
 
+.imgFlex{
+    display: flex;
+}
+
 /*-------------------------
         顏色
 -------------------------*/
@@ -229,9 +233,13 @@ h2::before{
 }
 
 /*顏色*/
-.pages_01_comic h2::before{
+h2::before{
+    background-image:url(../images/mark/quotation-marks.png);
+}
+/* .pages_02_music h2::before{
     background-image:url(../images/01/quotation-marks_comic.png);
 }
+
 .pages_02_film h2::before{
     background-image:url(../images/01/quotation-marks_film.png);
 }
@@ -250,7 +258,7 @@ h2::before{
 }
 .internation02 h2.color_purple::before{
     background-image:url(../images/02/quotation-marks.png);
-}
+} */
 /*--------------------
     h1+h2文字顏色
     COMIC

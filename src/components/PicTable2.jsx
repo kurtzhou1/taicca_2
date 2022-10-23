@@ -118,7 +118,7 @@ const PicTable2 = () => {
             <div className='content classTitle'>MUSIC</div>
             <div className='subContent classSubtitle'>AI音樂版權該給誰？</div>
             <div className='content classSubtitle'>隨著娛樂內容需求大幅度增加，供應商也面臨音效、配樂以及音樂等各種製作需求，在成本壓力之下，部分業者期望透過AI技術，快速生產可使用的音樂。然而隨著AI音樂製作逐漸開展，也進而引發著作權爭議。</div>
-            <div className='greenLight'>MORE＋</div>
+            <div className='greenLight' href="./02_music.html" >MORE＋</div>
             <div className='picTableWrap purple'>
                 <img src={circle}/>
                 <div className="pieChart1" id="target_pie">

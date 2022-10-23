@@ -149,6 +149,9 @@
         .greenLight{
             color: rgb(64, 243, 79);
             font-weight: bold;
+            &:hover{
+                cursor: pointer;
+            }
         }
         &:first-child{
             border-top: 1px solid black;

@@ -16,7 +16,9 @@ const ArticleCards = () => {
                     <div className='title classTitle'>COMIC</div>
                 </div>
                 <div className='subtitle classSubtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quibusdam.</div>
-                <div className='content classSubtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fuga ex est dignissimos officia eius adipisci nam, suscipit enim deleniti eligendi aut natus quis, rerum quod quos. Mollitia, nostrum. Delectus alias est, nihil mollitia eveniet temporibus doloremque maxime voluptate ipsam odio fuga culpa deleniti provident illo laborum fugiat possimus ad?<span className='more'>MORE+</span></div>
+                <div className='content classSubtitle'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fuga ex est dignissimos officia eius adipisci nam, suscipit enim deleniti eligendi aut natus quis, rerum quod quos. Mollitia, nostrum. Delectus alias est, nihil mollitia eveniet temporibus doloremque maxime voluptate ipsam odio fuga culpa deleniti provident illo laborum fugiat possimus ad?
+                    <a className='more' href="./01_comic.html" >MORE+</a>
+                </div>
             </div>
             <div className="film">
                 <div className='imgWrap'>

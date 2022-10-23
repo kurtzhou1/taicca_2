@@ -13,8 +13,8 @@ import footerLogo from '../components/images/section4/footerLogo.png'
 const MarketIntelligence = () => {
     const [open,setOpen] = useState(false);
     const [poptitle,setPoptitle] = useState('');
-    const [popClolr,setPopColor] = useState('');
     const [popContent,setPopContent] = useState('');
+    const [itemIdx,setItemIdx] = useState(0);
 
     const settings = {
         centerMode: true,
@@ -44,9 +44,6 @@ const MarketIntelligence = () => {
     return (
         <div className="marketIntelligence">
             <div className="content_block">
-                {/* <div className="block_title_h1">
-                    <img src={titleH1} alt="" />
-                </div> */}
                 <div className="subTitle bigClassTitle">
                     市場掃描
                 </div>
@@ -63,7 +60,7 @@ const MarketIntelligence = () => {
                             popData.map((item,idx)=>{
                                 return (
                                     <div className={`slider_box`} key={`slider${idx}`}>
-                                        <div className={`news_card ${item.color}`}>
+                                        <div className="news_card">
                                             <h3 className="card_title">
                                                {item.title}
                                             </h3>
@@ -73,11 +70,10 @@ const MarketIntelligence = () => {
                                             <div className="more_link" 
                                                 onClick={()=>{
                                                     setOpen(!open);
-                                                    setPopColor(item.color);
                                                     setPopContent(item.content);
                                                     setPoptitle(item.title);
-                                                 }
-                                                }
+                                                    setItemIdx(idx)
+                                                }}
                                             ><span>＋</span></div>
                                         </div>
                                     </div>
@@ -86,11 +82,9 @@ const MarketIntelligence = () => {
                         }
                     </Slider>
                 </div>
-
-       
             </div>
                 <img src={footerLogo} alt="" className='footerLogo'/>
-               <Popup open={open} closeFun={()=>{setOpen(false)}} title={poptitle} content={popContent} color={popClolr}/>
+               <Popup open={open} closeFun={()=>{setOpen(false)}} title={poptitle} content={popContent} itemIdx={itemIdx} />
         </div>
     );
 }

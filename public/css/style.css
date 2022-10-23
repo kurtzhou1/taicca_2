@@ -1,0 +1,383 @@
+/*font.css 已經引入思源黑體*/
+/*@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,500&display=swap');*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Noto Sans TC', Helvetica, Arial, '黑體-繁', 'Heiti TC', '儷黑', 'LiHei', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+
+    font-size: 16px;
+    
+}
+
+.bg_black{
+    background-color: #fff;
+}
+.wrapper {
+    position: relative; z-index: 2;
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    width: 828px; max-width: 828px; min-width: 320px; 
+    margin: 0 auto;
+}
+.wrapper >img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* ----------------------------------------------------
+	initial html5 reset
+---------------------------------------------------- */
+html,body,div,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{border:0;outline:0;font-size:100%;margin:0;padding:0;vertical-align:middle;}
+body{line-height:1;}
+article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}
+nav ul{list-style:none;}
+/*ol{list-style:none;}*/
+ul{list-style:none;}
+ul ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}ins{text-decoration:none;}del{text-decoration:line-through;}
+mark{background:none;}
+abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help;}
+table{border-collapse:collapse;
+border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+input[type=submit],input[type=button],button{margin:0;padding:0; border:none;vertical-align:middle;}
+input,select,a img{vertical-align:middle;}
+
+
+
+
+/*-------------------------
+
+
+          內  容
+
+
+-------------------------*/
+/* 共用框 */
+.inner{
+    width: 100%;
+    padding: 0 47px;
+}
+.inner .infoR{
+    text-align: right;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.inner .info.gary{
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.info.gary span{
+    font-weight: bold;
+    margin-top: 1rem;
+    background-color: #b6b6b6;
+    padding: 0rem 0.5rem;
+}
+
+.inner img{
+    width: 100%; 
+    height: auto;
+}
+
+/*-------------------------
+        顏色
+-------------------------*/
+.color_y{ color: #000;}
+.color_w{ color: #000;}
+.color_o{ color: #d95e56;}
+.color_purple{ color: #541a86;}
+.color_green{ color: #8bb461;}
+.bg_pruple{background-color: #e3dfe9;}
+
+
+/*-------------------------
+
+        header
+
+-------------------------*/
+header{
+    width: 100%; 
+    height: auto;
+    position: relative;
+}
+header .bg{
+    width: 100%; 
+    height: auto;
+}
+header .title{
+    position: absolute;
+    left: 4rem;
+    bottom: 0rem;
+    font-size: 3rem;
+    background: #fff;
+    padding: 1rem 1rem 0;
+    font-weight: bold;
+}
+header .logo{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+}
+header.header_black{
+    border-bottom: solid 2px #000;
+}
+/*右邊小字 類別*/
+header span{
+    font-size: 28px;
+    line-height: 1.5em;
+}
+
+
+
+.margin_t50{
+    margin-top: 50px;
+}
+.margin_r5{
+    margin-right:5px ;
+}
+/*-------------------------
+
+        
+
+-------------------------*/
+h1{
+    font-size: 50px;
+    line-height: 1.3em;
+    /* font-weight: 500; */
+    font-weight: bold;
+    margin-bottom: 54px;
+}
+
+h2{
+    position: relative;
+    font-size: 42px;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-align: justify;
+    padding-top: 60px;
+    
+    margin-bottom: 62px;
+}
+
+p{
+    font-size: 32px;
+    line-height: 1.5em;
+    font-weight:normal;
+    text-align: justify;
+    margin-bottom: 54px;
+}
+h3{
+     font-size: 36px;
+    line-height: 1.5em;
+    margin-bottom:2rem;
+}
+h4{
+    font-size: 30px;
+    line-height: 1.5em;
+    font-weight:bold;
+    text-align: justify;
+}
+h4 span{
+    opacity: .2;
+    vertical-align: bottom;
+
+    margin-left: 22px;
+
+}
+h5{
+    position: relative;
+    font-size: 42px;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-align: justify;
+    padding-top: 35px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;  
+}
+h6{
+   margin-bottom: 10px; 
+}
+ol {
+    margin-left:30px;
+}
+li {
+    margin-bottom:1.5rem;
+    line-height: 1.5;
+    font-size:32px;
+}
+/*--------------------
+    上引號
+--------------------*/
+h2::before{
+    position: absolute; top: 0; left: 0;
+    content: "";
+    display: block;
+    width: 55px; height: 50px;
+}
+
+/*顏色*/
+.pages_01_comic h2::before{
+    background-image:url(../images/01/quotation-marks_comic.png);
+}
+.pages_02_film h2::before{
+    background-image:url(../images/01/quotation-marks_film.png);
+}
+.pages_03_music h2::before{
+    background-image:url(../images/01/quotation-marks_music.png);
+}
+.pages_04_game h2::before{
+    background-image:url(../images/01/quotation-marks_game.png);
+}
+.tw02 h2::before{
+    background-image:url(../images/02/quotation-marks.png);
+}
+
+.internation02 h2::before{
+    background-image:url(../images/02/quotation-mark_internation02.png);
+}
+.internation02 h2.color_purple::before{
+    background-image:url(../images/02/quotation-marks.png);
+}
+/*--------------------
+    h1+h2文字顏色
+    COMIC
+--------------------*/
+.pages_01_comic h1,
+.pages_01_comic h2{
+    color: #000;
+}
+.pages_02_film h1,
+.pages_02_film h2{
+    color: #e9535c;
+}
+.pages_03_music h1,
+.pages_03_music h2{
+    color: #786bae;
+}
+.pages_04_game h1,
+.pages_04_game h2{
+    color: #c3d956;
+}
+
+
+
+
+
+
+/*--------------------
+    圖片
+--------------------*/
+.pages_03_music .picture {
+    background-color: #ffc000;
+    width: 100%;
+    text-align: center;
+}
+.flex_box_2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.flex_box_2 .picture{
+    width: 49%;
+}
+.picture{
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.picture.space_small{
+    padding-top: 0px;
+    margin-bottom: 10px;
+}
+.picture .title{
+    font-size: 32px;
+    line-height: 1.4em;
+    margin-bottom:20px;
+}
+.picture .txt{
+    background-color: #efefef;
+    padding: 24px;
+    color:black;
+}
+.picture .txt span{
+    display: block;
+    font-size: 30px;
+    line-height: 1.4em;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.picture .title span.txt_green{
+    background-color: #541a86;
+    color: #98c269;
+    padding: 0 5px;
+}
+
+.picture .title span.txt_purple{
+    background-color: #98c269;
+    color: #541a86;
+    padding: 0 5px;
+}
+
+.picture img {
+}
+
+.writer {
+    border:1px dashed #ccc;
+    padding:10px;
+    line-height: 1.5;
+}
+.writer span {
+    margin-right:10px;
+}
+/*-------------------------
+
+          footer
+
+-------------------------*/
+
+.footer .bottomInfo{
+    width: auto;
+    padding: 0;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.footer .imgWrap{
+    text-align: center;
+}
+
+.footer .imgWrap img{
+    width: 80%;
+    height: auto;
+}
+
+a.backhome{
+    background-color: #f93b1d;
+    border: none;
+    color: white;
+    height: 60px;
+    width: 220px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 30px;
+    margin: 0 auto 50px auto;
+    cursor: pointer;
+}    
+

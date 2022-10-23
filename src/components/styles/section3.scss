@@ -31,6 +31,7 @@
         }
         .picTableWrap{
             margin-top: 2rem;
+            position: relative;
             .text{
                 // display: flex;
                 // font-size: 0.1rem;
@@ -40,6 +41,14 @@
             }
             img{
                 width: 100%;
+            }
+            .pinkFlex{
+                position: absolute;
+                bottom: 6%;
+                display: flex;
+                width: 50%;
+                // animation: bounce; /* referring directly to the animation's @keyframe declaration */
+                animation-duration: 5s; /* don't forget to set a duration! */
             }
         }
         .pink{
@@ -70,6 +79,7 @@
         }
         .picTableWrap{
             margin-top: 2rem;
+            position: relative;
             .text{
                 .normal{
                     font-weight: 400;
@@ -77,6 +87,39 @@
             }
             img{
                 width: 100%;
+            }
+            .pie_name{
+                color: black;
+                fill:black;
+                font-size: 8px;
+                @include forPC(){
+                    font-size: 16px;
+                }
+                @media screen and (min-width:1200px){
+                    font-size: 20px;
+                }
+            }
+            .pieChart1{
+                position: absolute;
+                width: 25%;
+                height: 50%;
+                bottom: 6%;
+                left: 27%;
+            }
+            .pieChart2{
+                position: absolute;
+                width: 25%;
+                height: 50%;
+                bottom: 6%;
+                left: 53.5%;
+             
+            }
+            .pieChart3{
+                position: absolute;
+                width: 25%;
+                height: 50%;
+                bottom: 6%;
+                left: 78%;
             }
         }
         .greenLight{
@@ -163,7 +206,7 @@
         font-weight: bold;
         color: #fff;
         @include forPC(){
-            margin: 20px 0 20px 0px;
+            margin: 0px 0 20px 0px;
         }
     }
     .slider_block{

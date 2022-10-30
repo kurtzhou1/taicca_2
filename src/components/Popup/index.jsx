@@ -14,12 +14,12 @@ const Popup = ({open,closeFun,title,content, itemIdx}) => {
         <div className={`popup ${open? 'show':''}`}>
             <div className={`popup_block`}>
                 <div className='contentWrap'>
-                    <img src={itemIdx == 0 ? 
-                        pic1 : itemIdx == 1 ? 
-                        pic2 : itemIdx == 2 ? 
-                        pic3 : itemIdx == 3 ?
-                        pic4 : itemIdx == 4 ?
-                        pic5 : itemIdx == 5 ?
+                    <img src={itemIdx === 0 ? 
+                        pic1 : itemIdx === 1 ? 
+                        pic2 : itemIdx === 2 ? 
+                        pic3 : itemIdx === 3 ?
+                        pic4 : itemIdx === 4 ?
+                        pic5 : itemIdx === 5 ?
                         pic6 : pic7
                     } />
                     <div className='forButton'>
@@ -38,7 +38,7 @@ const Popup = ({open,closeFun,title,content, itemIdx}) => {
                     </div>
                     <div className="button_box">
                         <div className="close_btn" onClick={()=>{closeFun()}}>
-                            -
+                            x
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -15,12 +15,13 @@ const MarketIntelligence = () => {
     const [poptitle,setPoptitle] = useState('');
     const [popContent,setPopContent] = useState('');
     const [itemIdx,setItemIdx] = useState(0);
+    const [isPc, setIsPc] = useState(false);
 
     const settings = {
         centerMode: true,
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: isPc ? 5 : 3,
         slidesToScroll: 1,
         autoplay: false,
         speed: 1000,
@@ -39,7 +40,23 @@ const MarketIntelligence = () => {
                 }
             }
         ]
-      };
+    };
+
+    useEffect(()=>{
+        if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)
+        ) {
+            setIsPc(false);
+        }
+        else {
+            setIsPc(true);
+        }
+    }, [navigator.userAgent])
 
     return (
         <div className="marketIntelligence">

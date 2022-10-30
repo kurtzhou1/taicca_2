@@ -19,13 +19,21 @@
     }
     .picTableCard{
         padding-bottom: 2rem;
-        .content.classTitle{
+        .pink >a{
+            font-weight: bold;
+            color: #e2628d;
+        }
+        .purple >a{
+            font-weight: bold;
+            color: #61167e;
+        }
+        .content.classBetween{
             margin: 1rem 0;
             @include forPC(){
                 margin: 4rem 0 2rem;
             }
         }
-        .subContent.classSubtitle{
+        .subContent.classBetween{
             margin-bottom: 2rem;
             font-weight: bold;
         }
@@ -51,14 +59,7 @@
                 animation-duration: 5s; /* don't forget to set a duration! */
             }
         }
-        .pink{
-            font-weight: bold;
-            color: #e2628d;
-        }
-        .purple{
-            font-weight: bold;
-            color: #61167e;
-        }
+      
         &:first-child{
             border-bottom: 1px solid black;
             margin-bottom: 2rem;
@@ -66,14 +67,14 @@
     }
     .picTableCard2{
         padding-bottom: 2rem;
-        .content.classTitle{
+        .content.classBetween{
             margin: 1rem 0;
-            color: rgb(64, 243, 79);
+            color: #e8412a;
             @include forPC(){
                 margin: 4rem 0 2rem;
             }
         }
-        .subContent.classSubtitle{
+        .subContent.classBetween{
             margin-bottom: 2rem;
             font-weight: bold;
         }
@@ -147,7 +148,7 @@
             }
         }
         .greenLight{
-            color: rgb(64, 243, 79);
+            color: #e8412a;
             font-weight: bold;
             &:hover{
                 cursor: pointer;
@@ -186,30 +187,33 @@
                 width: 100%;
                 padding-bottom: 1rem;
             }
-            .title.classTitle{
+            .title.classBetween{
                 position: absolute;
                 left: 0;
-                bottom: 0.75rem;
-                color: rgb(64, 243, 79);
+                bottom: 0.25rem;
+                color: #e8412a;
             }
         }
-        .classSubtitle{
+        .classBetween{
             &.subtitle{
                 margin: 1rem 0;
                 font-weight: bold;
             }
             &.content{
                 color: rgb(156, 156, 156);
-                .more{
-                    color: rgb(64, 243, 79);
-                    font-weight: bold;
-                    margin-left: 0.5rem;
-                    &:hover{
-                        cursor: pointer;
-                    }
-                }
             }
         }
+        .bigClassSubtitle .more{
+                color: #e8412a ;
+                font-weight: bold;
+                margin-left: 0.5rem;
+                &:hover{
+                    cursor: pointer;
+                }
+        }
+    }
+    .introduction .classSubtitle.content{
+        color: #8f8f8f;
     }
 }
 
@@ -268,16 +272,18 @@
                 .card_title{
                     width: 100%;
                     position: relative;
-                    font-size: 20px;
+                    font-size: 18px;
                     min-height: 100px;
                     @include forPC(){
                         margin-bottom: 30px;
+                        font-size: 20px;
                     }
                 }
                 p{
-                    font-size: 16px;
+                    font-size: 15px;
                     line-height: 25px;
                     color: #666;
+                    word-break: break-all;
                     //重要卡
                     min-height: 200px;
                     @include forPC(){

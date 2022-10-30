@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { ImCross } from "react-icons/im";
 
 
@@ -23,33 +23,33 @@ const Menu = ({isShow, setLeftVisible}) => {
         <div className={`Menu ${isShow ? "show":""}`}>
             <div className='center'>
                 <div className='crossIcon' onClick={()=>setLeftVisible(false)}><ImCross /></div>
-                <div onClick={()=>scrollToAnchor("01section")}>
+                <div>
                     <div className='bigClass'>01</div>
                     <div className='bigClassTitle'>TAICCA聚焦</div>
                     <div className='classSubtitle'>
-                        <div>COMIC</div>
-                        <div>FILM</div>
-                        <div>INTERDISCIPLINARY</div>
-                        <div>GAME</div>
+                        <div onClick={()=>scrollToAnchor("01section_COMIC")}>COMIC</div>
+                        <div onClick={()=>scrollToAnchor("01section_FILM")}>FILM</div>
+                        <div onClick={()=>scrollToAnchor("01section_INTERDISCIPLINARY")}>INTERDISCIPLINARY</div>
+                        <div onClick={()=>scrollToAnchor("01section_GAME")}>GAME</div>
                     </div>
                 </div>
-                <div onClick={()=>scrollToAnchor("02section")}>
+                <div>
                     <div className='bigClass'>02</div>
                     <div className='bigClassTitle'>產業研究&nbsp;/&nbsp;臺灣觀察</div>
                     <div className='classSubtitle'>
-                        <div>INTERDISCIPLINARY</div>
-                        <div>TV</div>
+                        <div onClick={()=>scrollToAnchor("02section_INTERDISCIPLINARY")}>INTERDISCIPLINARITY</div>
+                        <div onClick={()=>scrollToAnchor("02section_TV")}>TV</div>
                     </div>
                 </div>
-                <div onClick={()=>scrollToAnchor("03section")}>
+                <div>
                     <div className='bigClass'>03</div>
                     <div className='bigClassTitle'>產業研究&nbsp;/&nbsp;國際動態</div>
                     <div className='classSubtitle'>
-                        <div>FUTURE&nbsp;CONTENT1</div>
-                        <div>FUTURE&nbsp;CONTENT2</div>
-                        <div>GAME</div>
-                        <div>COMIC</div>
-                        <div>MUSIC</div>
+                        <div onClick={()=>scrollToAnchor("03section_CONTENT1")}>FUTURE&nbsp;CONTENT1</div>
+                        <div onClick={()=>scrollToAnchor("03section_CONTENT2")}>FUTURE&nbsp;CONTENT2</div>
+                        <div onClick={()=>scrollToAnchor("03section_GAME")}>GAME</div>
+                        <div onClick={()=>scrollToAnchor("03section_COMIC")}>COMIC</div>
+                        <div onClick={()=>scrollToAnchor("03section_MUSIC")}>MUSIC</div>
                     </div>
                 </div>
             </div>

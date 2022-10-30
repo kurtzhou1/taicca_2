@@ -31,7 +31,7 @@ body {
 .bigClassCard1{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     span{
         color: black;
         background-color: #fff;
@@ -45,7 +45,7 @@ body {
 .bigClassCard2{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     span{
         color: #fff;
         background-color: black;
@@ -116,12 +116,22 @@ body {
     }
 }
 
+.classBetween{
+    font-size: 23px !important;
+    line-height: 20px !important;
+    font-weight: bold;
+    @include forPC(){
+        font-size: 44px !important;
+        line-height: 45px !important;
+    }
+}
+
 .classSubtitle{
     font-size: 18px !important;
     line-height: 20px !important;
     @include forPC(){
-        font-size: 30px !important;
-        line-height: 36px !important;
+        font-size: 28px !important;
+        line-height: 40px !important;
     }
 }
 
@@ -154,5 +164,9 @@ body {
 
 .page{
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
+}
+
+.fontBold{
+    font-weight: bold;
 }

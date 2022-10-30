@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+// import React from 'react';
 import circle from './images/picTable/circle.png';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 
@@ -114,13 +115,12 @@ const PicTable2 = () => {
     }, [])
 
     return (
-        <div className='picTableCard2'>
-            <div className='content classTitle'>MUSIC</div>
-            <div className='subContent classSubtitle'>AI音樂版權該給誰？</div>
-            <div className='content classSubtitle'>隨著娛樂內容需求大幅度增加，供應商也面臨音效、配樂以及音樂等各種製作需求，在成本壓力之下，部分業者期望透過AI技術，快速生產可使用的音樂。然而隨著AI音樂製作逐漸開展，也進而引發著作權爭議。</div>
-            <div className='greenLight' href="./02_music.html" >MORE＋</div>
+        <div className='picTableCard2' id="03section_MUSIC">
+            <div className='content classBetween'>MUSIC</div>
+            <div className='subContent classBetween'>AI音樂著作權利該歸誰？</div>
+            <div className='content bigClassSubtitle'>隨著娛樂內容需求大幅度增加，供應商也面臨音效、配樂以及音樂等各種製作需求，在成本壓力之下，部分業者期望透過AI技術，快速生產可使用的音樂。然而隨著AI音樂製作逐漸開展，也進而引發著作權爭議。<a className='greenLight' href="./02_music.html" >MORE＋</a></div>
             <div className='picTableWrap purple'>
-                <img src={circle}/>
+                <img src={circle} id="target_pie"/>
                 <div className="pieChart1" id="target_pie">
                     {
                         showImage && <ResponsiveContainer width="100%" height="100%">

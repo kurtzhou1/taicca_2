@@ -21,8 +21,13 @@ body {
     overflow: hidden;
     width: 100%;
     background-color: transparent;
-    width: 828px; max-width: 828px; min-width: 320px; 
+    width: 95%; max-width: 95%; min-width: 40%; 
     margin: 0 auto;
+}
+@media screen and (min-width: 980px) {
+    .wrapper {
+        width: 70%; max-width: 70%; min-width: 40%; 
+    }
 }
 .wrapper >img{
     width: 100%;
@@ -82,6 +87,12 @@ input,select,a img{vertical-align:middle;}
     margin-top: 1rem;
     background-color: #b6b6b6;
     padding: 0rem 0.5rem;
+    line-height: 1.2;
+}
+
+.info .inline{
+    width: 2rem;
+    height: 2rem;
 }
 
 .inner img{
@@ -91,6 +102,10 @@ input,select,a img{vertical-align:middle;}
 
 .imgFlex{
     display: flex;
+}
+
+.imgFlex >img{
+    width: 50%;
 }
 
 /*-------------------------
